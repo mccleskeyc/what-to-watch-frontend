@@ -2,8 +2,19 @@ const initialState = {
     movies: [],
     loading: true
 }
-const moviesReducer = (state =initialState, action) => {
+const moviesReducer = (state=initialState, action) => {
     switch(action.type) {
+      case "LOADING":
+        return {
+          ...state,
+          loading: true
+        }
+      case "SET_MOVIES":
+        return {
+          ...state,
+          loading: false,
+          movies: action.movies
+        }
         default:
             return state;
     }

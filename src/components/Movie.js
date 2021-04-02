@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 
 class Movie extends Component {
     render() {
+        const {title, genre, streamer, description} = this.props
         return (
             <div>
-                Movie
+                <h1>{title}</h1>
+                <p> <b>Genre:</b> {genre} | <b> Streaming Service:</b> {streamer} </p>
+                <p> <b>About:</b> {description}</p>
             </div>
         )
     }
