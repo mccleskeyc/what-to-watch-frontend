@@ -8,3 +8,5 @@ const moviesReducer = (state, action) => {
             return state;
     }
 }
+
+export default moviesReducer;
