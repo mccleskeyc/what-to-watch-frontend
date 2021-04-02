@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class movieIndex extends Component {
+class movieIndex extends Component {
     render() {
         return (
             <div>
