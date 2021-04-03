@@ -10,7 +10,6 @@ class NavBar extends Component {
                     <li><Link to="/"><b>What to Watch</b></Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/form">Add a Recommendation</Link></li>
-                    <li><Link to="/movieindex">List of All Movies</Link></li>
                 </ul>
                 </nav>
             </div>
