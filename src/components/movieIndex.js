@@ -7,6 +7,7 @@ class MovieIndex extends Component {
         const movies = this.props.movies.map((movie, i) => <Movie key={i} title={ movie.title } genre={movie.genre} streamer={movie.streamer} description={movie.description} />)
         return (
             <div>
+            <h1>All Movies</h1>
                 {movies}
             </div>
         )

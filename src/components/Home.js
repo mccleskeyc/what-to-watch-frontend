@@ -5,15 +5,15 @@ class Home extends Component {
     render() {
         return (
             <div className="App">
-                <h1><u>What To Watch</u></h1>
+
                 <h2>What are you feeling?</h2>
-                <ul>
-                    <li><Link to="/comedy">Comedy</Link></li>
-                    <li><Link to="/drama">Drama</Link></li>
-                    <li><Link to="/scifi-fantasy">Sci-Fi/Fantasy</Link></li>
-                    <li><Link to="/family">Family</Link></li>
+                <ul className="collection ">
+                    <li className="collection-item "><Link to="/comedy" className="genre-link ">Comedy</Link></li>
+                    <li className="collection-item"><Link to="/drama" className="genre-link">Drama</Link></li>
+                    <li className="collection-item"><Link to="/scifi-fantasy" className="genre-link">Sci-Fi/Fantasy</Link></li>
+                    <li className="collection-item"><Link to="/family" className="genre-link">Family</Link></li>
                 </ul>
-            </div>
+                </div>
         )
     }
 }

@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  color: #01579b;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  color: #01579b;
+  text-align: center;
+}
+.collection-item:hover, .collection:hover , .collection-item{
+  background-color: #01579b;
+  font-size: large;
+  color:white;
+}
+
+
+.collection, .genre-link:hover{
+  text-align: center;
+  margin: 0;
+  color:white;
+}
+.card-blue {
+  background: #01579b10;
 }

@@ -8,6 +8,7 @@ class Comedy extends Component {
         const filteredMovies = movies.filter(movie => movie.props.genre === "Comedy")
         return (
             <div>
+                <h1>Comedies</h1>
                 {filteredMovies}
             </div>
         )

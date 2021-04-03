@@ -5,12 +5,14 @@ class NavBar extends Component {
     render() {
         return (
             <div>
+            <nav className=" light-blue darken-4" >
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/"><b>What to Watch</b></Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/form">Add a Recommendation</Link></li>
                     <li><Link to="/movieindex">List of All Movies</Link></li>
                 </ul>
+                </nav>
             </div>
         )
     }

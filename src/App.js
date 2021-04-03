@@ -13,6 +13,8 @@ import Comedy from './components/Genres/Comedy';
 import SciFiFant from './components/Genres/SciFiFant';
 import Drama from './components/Genres/Drama';
 import Family from './components/Genres/Family';
+import './index.css'
+
 class App extends Component {
 
   componentDidMount() {

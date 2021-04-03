@@ -34,7 +34,7 @@ class Form extends Component {
                     <br />
                     <div>
                         <label htmlFor="genre">Genre: </label>
-                        <select id="genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
+                        <select id="genre" name="genre" value={this.state.genre} onChange={this.handleChange} className="browser-default">
                             <option value="" disabled>Select Genre</option>
                             <option value="Comedy">Comedy</option>
                             <option value="Drama">Drama</option>
@@ -45,7 +45,7 @@ class Form extends Component {
                     <br />
                     <div>
                         <label htmlFor="streamer">Streaming Service: </label>
-                        <select id="streamer" name="streamer" value={this.state.streamer} onChange={this.handleChange} >
+                        <select id="streamer" name="streamer" value={this.state.streamer} onChange={this.handleChange} className="browser-default" >
                             <option value="" disabled>Select Service</option>
                             <option value="Netflix">Netflix</option>
                             <option value="Hulu">Hulu</option>
@@ -60,7 +60,7 @@ class Form extends Component {
                         <textarea id="description" name="description" value={this.state.description} onChange={this.handleChange}autoComplete="off" />
                     </div>
                     <br />
-                    <input type="submit" value="Add a Movie Reccomendation" />
+                    <input type="submit" value="Add a Movie Reccomendation" className="waves-effect waves-light btn-small  light-blue darken-4" />
                 </form>
             </div>
         )

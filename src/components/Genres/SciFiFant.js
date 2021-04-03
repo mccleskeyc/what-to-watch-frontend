@@ -8,6 +8,7 @@ class SciFiFant extends Component {
         const filteredMovies = movies.filter(movie => movie.props.genre === "Sci-Fi/Fantasy")
         return (
             <div>
+                <h1>Sci-Fi/Fantasy</h1>
                 {filteredMovies}
             </div>
         )
