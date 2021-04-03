@@ -29,17 +29,30 @@ class Form extends Component {
                 <form onSubmit={this.handleSubmit} >
                     <div>
                     <label htmlFor="title">Title </label>
-            <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } autoComplete="off" />
+                    <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } autoComplete="off" />
                     </div>
                     <br />
                     <div>
                         <label htmlFor="genre">Genre: </label>
-                        <input type="text" id="genre" name="genre" value={this.state.genre} onChange={this.handleChange} autoComplete="off"/>
+                        <select id="genre" name="genre" value={this.state.genre} onChange={this.handleChange}>
+                            <option value="" disabled>Select Genre</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</option>
+                            <option value="Family">Family</option>
+                        </select>
                     </div>
                     <br />
                     <div>
                         <label htmlFor="streamer">Streaming Service: </label>
-                        <input type="text" id="streamer" name="streamer" value={this.state.streamer} onChange={this.handleChange} autoComplete="off"/>
+                        <select id="streamer" name="streamer" value={this.state.streamer} onChange={this.handleChange} >
+                            <option value="" disabled>Select Service</option>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Hulu">Hulu</option>
+                            <option value="Disney+">Disney+</option>
+                            <option value="HBOMax">HBOMax</option>
+                            <option value="Amazon Prime">Amazon Prime</option>
+                        </select>
                     </div>
                     <br />
                     <div>
