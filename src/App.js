@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Footer from './components/Footer';
-import Nav from './components/NavBar';
-import Home from './components/Home';
-import ErrorAlert from './components/Error';
-import About from './components/About';
-import Form from './components/Form';
-import MovieIndex from './components/MovieIndex';
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getMovies } from './actions';
+import Navbar from './components/NavBar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import About from './components/About';
+import MovieIndex from './components/MovieIndex';
+import ErrorPage from './components/Error';
+import Form from './components/Form';
 
 class App extends Component {
+
   componentDidMount() {
     this.props.getMovies();
   }
@@ -20,24 +21,73 @@ class App extends Component {
       return (
         <h3>Loading...</h3>
       )
-    }  return (
-    <Router>
-    <Nav />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/form" component={Form} />
-      <Route exact path="/movieindex" component={MovieIndex} />
-      <Route component={ErrorAlert} />
-    </Switch>
-    <Footer />
-    </Router>
-  );
+    }
+
+    return (
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={ Home } />
+          <Route exact path="/about" component={ About } />
+          <Route exact path="/movieindex" component={ MovieIndex } />
+          <Route exact path="/form" component={ Form } />
+          <Route component={ErrorPage} />
+        </Switch>
+        <Footer />
+      </Router>
+    );
+  }
 }
-}
-const mapStatetoProps = state => {
+
+const mapStateToProps = state => {
   return {
     loading: state.loading
   }
 }
-export default connect(mapStatetoProps, {getMovies})(App);
+
+export default connect(mapStateToProps, { getMovies })(App);
+
+
+// import React, { Component } from 'react';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Footer from './components/Footer';
+// import Nav from './components/NavBar';
+// import Home from './components/Home';
+// import ErrorAlert from './components/Error';
+// import About from './components/About';
+// import Form from './components/Form';
+// import MoviemovieIndex from './components/MoviemovieIndex';
+// import { connect } from 'react-redux';
+// import { getMovies } from './actions';
+
+// class App extends Component {
+//   componentDidMount() {
+//     this.props.getMovies();
+//   }
+
+//   render() {
+//     if (this.props.loading) {
+//       return (
+//         <h3>Loading...</h3>
+//       )
+//     }  return (
+//     <Router>
+//     <Nav />
+//     <Switch>
+//       <Route exact path="/" component={Home} />
+//       <Route exact path="/about" component={About} />
+//       <Route exact path="/form" component={Form} />
+//       <Route exact path="/movieindex" component={MoviemovieIndex} />
+//       <Route component={ErrorAlert} />
+//     </Switch>
+//     <Footer />
+//     </Router>
+//   );
+// }
+// }
+// const mapStatetoProps = state => {
+//   return {
+//     loading: state.loading
+//   }
+// }
+// export default connect(mapStatetoProps, {getMovies})(App);

@@ -18,8 +18,9 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+    
         this.props.addMovie(this.state, this.props.history);
-    }
+      }
 
     render() {
         return (
