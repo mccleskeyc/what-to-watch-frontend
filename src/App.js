@@ -9,7 +9,10 @@ import About from './components/About';
 import MovieIndex from './components/MovieIndex';
 import ErrorPage from './components/Error';
 import Form from './components/Form';
-
+import Comedy from './components/Genres/Comedy';
+import SciFiFant from './components/Genres/SciFiFant';
+import Drama from './components/Genres/Drama';
+import Family from './components/Genres/Family';
 class App extends Component {
 
   componentDidMount() {
@@ -31,6 +34,10 @@ class App extends Component {
           <Route exact path="/about" component={ About } />
           <Route exact path="/movieindex" component={ MovieIndex } />
           <Route exact path="/form" component={ Form } />
+          <Route exact path="/comedy" component={Comedy} />
+          <Route exact path="/drama" component={Drama} />
+          <Route exact path="/scifi-fantasy" component={SciFiFant} />
+          <Route exact path="/family" component={Family} />
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
