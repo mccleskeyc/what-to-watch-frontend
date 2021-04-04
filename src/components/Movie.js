@@ -1,27 +1,27 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom';
+import w2wlogo from './w2wlogo.png'
 class Movie extends Component {
     render() {
-        const {title, genre, streamer, description} = this.props;
-
+        const {title, description} = this.props;
         return (
 
-            <div class="row ">
-    <div class="col s12 m6 offset-m3">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/4940c5878babf3dc5d2ca567b7558178_9e62fc4c-4116-48e5-a4f5-3a99c73ae7b1_480x.progressive.jpg?v=1573651499" />
-          <span class="card-title">{title}</span>
-        </div>
-        <div class="card-content">
-          <p>{description}.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">More Info</a>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div className="row ">
+            <div className="col s12 m6 offset-m3">
+              <div className="card">
+                <div className="card-image">
+                  <img src={w2wlogo} alt="What to Watch Logo" />
+                  <span className="card-title ">{title}</span>
+                </div>
+                <div className="card-content">
+                  <p>{description}</p>
+                </div>
+                <div className="card-action ">
+                  <Link to="#" className="light-blue-text text-darken-4">More Info</Link>
+                </div>
+              </div>
+            </div>
+          </div>
             
        
 
