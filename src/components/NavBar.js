@@ -5,7 +5,7 @@ class NavBar extends Component {
     render() {
         return (
             <div>
-            <nav className=" light-blue darken-4" >
+            <nav className=" light-blue darken-4 navpattern" >
                 <ul>
                     <li><Link to="/"><b>What to Watch</b></Link></li>
                     <li><Link to="/about">About</Link></li>

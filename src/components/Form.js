@@ -27,6 +27,7 @@ class Form extends Component {
         return (
             <div>
                 <h1>Recommend a Movie</h1>
+                <p>We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b></p>
                 <form onSubmit={this.handleSubmit} >
                     <div>
                     <label htmlFor="title">Title </label>

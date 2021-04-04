@@ -6,7 +6,7 @@ import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import MovieIndex from './components/MovieIndex';
+import MovieIndex from './components/movieIndex';
 import ErrorPage from './components/Error';
 import Form from './components/Form';
 import Comedy from './components/Genres/Comedy';
@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <Router>
         <Navbar />
+        <div className="container">
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
@@ -43,6 +44,7 @@ class App extends Component {
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
+        </div>
       </Router>
     );
   }
