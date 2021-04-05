@@ -13,7 +13,23 @@ import Comedy from './components/Genres/Comedy';
 import SciFiFant from './components/Genres/SciFiFant';
 import Drama from './components/Genres/Drama';
 import Family from './components/Genres/Family';
-import './index.css'
+// import './index.css'
+import {createMuiTheme, ThemeProvider} from '@material-ui/core';
+import Container from '@material-ui/core/Container';
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main:'#01579b',
+      light: '#4f83cc',
+      dark: '#002f6c'
+    },
+    secondary: {
+      main: '#edf0f2',
+      light: '#ffffff',
+      dark: '#bbbebf'
+    }
+  }
+})
 
 class App extends Component {
 
@@ -28,7 +44,11 @@ class App extends Component {
       )
     }
 
+
+
     return (
+      <ThemeProvider theme={theme}>
+      <Container>
       <Router>
         <Navbar />
         <div className="container">
@@ -46,6 +66,8 @@ class App extends Component {
         <Footer />
         </div>
       </Router>
+      </Container>
+      </ThemeProvider>
     );
   }
 }

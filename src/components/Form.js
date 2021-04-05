@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {addMovie} from '../actions';
 import {connect} from 'react-redux';
+import { Typography } from '@material-ui/core';
 
 class Form extends Component {
     state = {
@@ -26,11 +27,22 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <h1>Recommend a Movie</h1>
-                <p>We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b></p>
+                <Typography
+                    variant="h5"
+                    align="center"
+                    color="primary"
+                >
+                Recommend a Movie
+                </Typography>
+
+                <Typography
+                    variant= "body2"
+                >
+                We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b>
+                <br /><br />
                 <form onSubmit={this.handleSubmit} >
                     <div>
-                    <label htmlFor="title">Title </label>
+                    <label htmlFor="title">Title: </label>
                     <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } autoComplete="off" />
                     </div>
                     <br />
@@ -64,6 +76,7 @@ class Form extends Component {
                     <br />
                     <input type="submit" value="Add a Movie Reccomendation" className="waves-effect waves-light btn-small  light-blue darken-4" />
                 </form>
+                </Typography>
             </div>
         )
     }
