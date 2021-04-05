@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { addMovie } from '../actions';
 import { connect } from 'react-redux';
-import { Typography, Select, FormControl, MenuItem, InputLabel } from '@material-ui/core';
+import { Typography, Select, FormControl, MenuItem, InputLabel, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 
 class Form extends Component {
@@ -111,7 +111,7 @@ class Form extends Component {
                             />
                         </div>
                         <br />
-                        <input type="submit" value="Add a Movie Reccomendation" className="waves-effect waves-light btn-small  light-blue darken-4" />
+                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Submit</Button>
                     </form>
                 </Typography>
             </div>
