@@ -7,10 +7,13 @@ class Home extends Component {
             <div className="App">
 
                 <Typography 
-                    variant="h5"
+                    variant="h4"
                     align="center"
                     color="primary">
+                    <br />
                 What are you feeling?
+                <br />
+                <br />
                 </Typography>
 
                 <ul className="collection ">

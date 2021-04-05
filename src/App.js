@@ -13,7 +13,7 @@ import Comedy from './components/Genres/Comedy';
 import SciFiFant from './components/Genres/SciFiFant';
 import Drama from './components/Genres/Drama';
 import Family from './components/Genres/Family';
-// import './index.css'
+import './index.css'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 const theme = createMuiTheme({
@@ -48,7 +48,7 @@ class App extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-      <Container>
+      
       <Router>
         <Navbar />
         <div className="container">
@@ -66,7 +66,7 @@ class App extends Component {
         <Footer />
         </div>
       </Router>
-      </Container>
+      
       </ThemeProvider>
     );
   }

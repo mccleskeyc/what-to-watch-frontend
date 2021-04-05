@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import w2wlogo from './w2wlogo.png'
+
+
 class Movie extends Component {
     render() {
-        const {title, description, genre} = this.props;
+        const {title, description, genre, streamer} = this.props;
         return (
 
           <div className="row ">
@@ -15,7 +17,8 @@ class Movie extends Component {
                 </div>
                 <div className="card-content">
                   <p>{description}</p>
-                  <p>{genre}</p>
+                  <br/>
+                  <p><b>Genre: </b>{genre}     | <b>Streaming Service: </b>{streamer}</p>
                 </div>
                 <div className="card-action ">
                   <Link to="#" className="light-blue-text text-darken-4">More Info</Link>

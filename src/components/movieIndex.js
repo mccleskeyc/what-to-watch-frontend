@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Movie from './Movie'
+import {Grid, Paper} from '@material-ui/core'
 
 class MovieIndex extends Component {
     render() {
@@ -8,7 +9,7 @@ class MovieIndex extends Component {
         return (
             <div>
             <h1>All Movies</h1>
-                {movies}
+            {movies}
             </div>
         )
     }

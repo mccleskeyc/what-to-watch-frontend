@@ -11,7 +11,9 @@ class About extends Component {
                     align="center"
                     color="primary"
                 >
+                <br />
                     About What to Watch
+                <br /><br />
                 </Typography>
                     
                 <Typography

@@ -30,17 +30,19 @@ class Form extends Component {
         return (
             <div>
                 <Typography
-                    variant="h5"
+                    variant="h4"
                     align="center"
                     color="primary"
-                >
+                ><br />
                     Recommend a Movie
+                <br />
                 </Typography>
 
                 <Typography
                     variant="body2"
                 >
-                    We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b>
+                    <p>We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b></p>
+                    
                     <br /><br />
                     <form noValidate autoComplete="off" onSubmit={this.handleSubmit} >
                         <div>
@@ -52,6 +54,8 @@ class Form extends Component {
                                 name="title"
                                 value={this.state.title}
                                 onChange={this.handleChange}
+                                multiline
+                                
                             />
                         </div>
 
