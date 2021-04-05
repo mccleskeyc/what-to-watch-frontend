@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {addMovie} from '../actions';
-import {connect} from 'react-redux';
-import { Typography } from '@material-ui/core';
+import { addMovie } from '../actions';
+import { connect } from 'react-redux';
+import { Typography, Select, FormControl, MenuItem, InputLabel } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 class Form extends Component {
     state = {
@@ -14,15 +15,16 @@ class Form extends Component {
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-
         })
+        console.log(e.target.name)
+        console.log(e.target.value)
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-    
+
         this.props.addMovie(this.state, this.props.history);
-      }
+    }
 
     render() {
         return (
@@ -32,50 +34,85 @@ class Form extends Component {
                     align="center"
                     color="primary"
                 >
-                Recommend a Movie
+                    Recommend a Movie
                 </Typography>
 
                 <Typography
-                    variant= "body2"
+                    variant="body2"
                 >
-                We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b>
-                <br /><br />
-                <form onSubmit={this.handleSubmit} >
-                    <div>
-                    <label htmlFor="title">Title: </label>
-                    <input type="text" id="title" name="title" value={ this.state.title } onChange={ this.handleChange } autoComplete="off" />
-                    </div>
-                    <br />
-                    <div>
-                        <label htmlFor="genre">Genre: </label>
-                        <select id="genre" name="genre" value={this.state.genre} onChange={this.handleChange} className="browser-default">
-                            <option value="" disabled>Select Genre</option>
-                            <option value="Comedy">Comedy</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</option>
-                            <option value="Family">Family</option>
-                        </select>
-                    </div>
-                    <br />
-                    <div>
-                        <label htmlFor="streamer">Streaming Service: </label>
-                        <select id="streamer" name="streamer" value={this.state.streamer} onChange={this.handleChange} className="browser-default" >
-                            <option value="" disabled>Select Service</option>
-                            <option value="Netflix">Netflix</option>
-                            <option value="Hulu">Hulu</option>
-                            <option value="Disney+">Disney+</option>
-                            <option value="HBOMax">HBOMax</option>
-                            <option value="Amazon Prime">Amazon Prime</option>
-                        </select>
-                    </div>
-                    <br />
-                    <div>
-                        <label htmlFor="description">Description: </label>
-                        <textarea id="description" name="description" value={this.state.description} onChange={this.handleChange}autoComplete="off" />
-                    </div>
-                    <br />
-                    <input type="submit" value="Add a Movie Reccomendation" className="waves-effect waves-light btn-small  light-blue darken-4" />
-                </form>
+                    We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b>
+                    <br /><br />
+                    <form noValidate autoComplete="off" onSubmit={this.handleSubmit} >
+                        <div>
+                            <TextField
+                                label="Title:"
+                                variant="outlined"
+                                fullWidth
+                                id="title"
+                                name="title"
+                                value={this.state.title}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+
+                        <br />
+
+                        <div>
+
+                            <FormControl fullWidth>
+                                <InputLabel id="genre">Genre</InputLabel>
+                                <Select
+                                    labelId="genre"
+                                    id="genre"
+                                    name="genre"
+                                    onChange={this.handleChange}
+                                    value={this.state.genre}
+                                >
+                                    <MenuItem value="Comedy">Comedy</MenuItem>
+                                    <MenuItem value="Drama">Drama</MenuItem>
+                                    <MenuItem value="Sci-Fi/Fantasy">Sci-Fi/Fantasy</MenuItem>
+                                    <MenuItem value="Family">Family</MenuItem>
+                                </Select>
+                            </FormControl>
+
+                        </div>
+                        <br />
+                        <div>
+
+                        <FormControl fullWidth>
+                                <InputLabel id="streamer">Streamer</InputLabel>
+                                <Select
+                                    labelId="streamer"
+                                    id="streamer"
+                                    name="streamer"
+                                    onChange={this.handleChange}
+                                    value={this.state.streamer}
+                                >
+                                    <MenuItem value="Netflix">Netflix</MenuItem>
+                                    <MenuItem value="Hulu">Hulu</MenuItem>
+                                    <MenuItem value="Disney+">Disney+</MenuItem>
+                                    <MenuItem value="HBOMax">HBOMax</MenuItem>
+                                    <MenuItem value="Amazon Prime">Amazon Prime</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <br />
+                        <div>
+                            <TextField
+                                label="Description:"
+                                variant="outlined"
+                                fullWidth
+                                id="description"
+                                name="description"
+                                value={this.state.description}
+                                onChange={this.handleChange}
+                                multiline
+                                rows={3}
+                            />
+                        </div>
+                        <br />
+                        <input type="submit" value="Add a Movie Reccomendation" className="waves-effect waves-light btn-small  light-blue darken-4" />
+                    </form>
                 </Typography>
             </div>
         )
