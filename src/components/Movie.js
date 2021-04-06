@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import w2wlogo from './w2wlogo.png'
 
 
+
 class Movie extends Component {
     render() {
         const {title, description, genre, streamer} = this.props;
         return (
-
+          
           <div className="row ">
+          
             <div className="col s12 m6 offset-m3">
               <div className="card">
                 <div className="card-image">
@@ -25,6 +27,7 @@ class Movie extends Component {
                 </div>
               </div>
             </div>
+
           </div>
             
        
