@@ -9,10 +9,10 @@ class Error extends Component {
             <div>
             <br /> <br />
             <Grid container justify = "space-around">
-            <img src={droids} height="200px"></img>
+            <img src={droids} height="200px" alt="These are not the droids you are looking for."></img>
             </Grid>
             <br /> <br />
-            <Typography variant="h5" align="center" color="primary">These are not the droids you're looking for.</Typography>
+            <Typography variant="h5" align="center" color="primary">These are not the droids you are looking for.</Typography>
             <Typography variant="body2" align="center">
             Oops! There seems to be an error. <Link to="/">Return home</Link> to keep looking.</Typography>
             </div>

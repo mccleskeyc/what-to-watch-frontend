@@ -15,7 +15,7 @@ import Drama from './components/Genres/Drama';
 import Family from './components/Genres/Family';
 import './index.css'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
