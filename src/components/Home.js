@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+
 class Home extends Component {
     render() {
         return (
             <div className="App">
-
                 <Typography 
                     variant="h4"
                     align="center"
                     color="primary">
                     <br />
-                What are you feeling?
-                <br />
-                <br />
+                        What are you feeling?
+                    <br />
+                    <br />
                 </Typography>
 
                 <ul className="collection ">
@@ -22,9 +22,11 @@ class Home extends Component {
                     <li className="collection-item"><Link to="/scifi-fantasy" className="genre-link">Sci-Fi/Fantasy</Link></li>
                     <li className="collection-item"><Link to="/family" className="genre-link">Family</Link></li>
                 </ul>
+
                 <br/>
+
                 <p className="center-align">Not sure what you want to watch? Take a look at the list of <Link to="/movieindex">all suggestions</Link>.</p>
-                </div>
+            </div>
         )
     }
 }

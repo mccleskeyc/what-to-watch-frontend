@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { addMovie } from '../actions';
 import { connect } from 'react-redux';
 import { Typography, Select, FormControl, MenuItem, InputLabel, Button } from '@material-ui/core';
@@ -16,8 +16,6 @@ class Form extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         })
-        console.log(e.target.name)
-        console.log(e.target.value)
     }
 
     handleSubmit = (e) => {
@@ -33,18 +31,21 @@ class Form extends Component {
                     variant="h4"
                     align="center"
                     color="primary"
-                ><br />
+                >
+                    <br />
                     Recommend a Movie
                 <br />
+
                 </Typography>
 
                 <Typography
                     variant="body2"
                 >
                     <p>We currently support recommeding movies available to stream on Netflix, Hulu, Disney+, HBOMax, and Amazon Prime. <b>Please only recommend movies currently available on one of those platforms.</b></p>
-                    
+
                     <br /><br />
-                    <form noValidate autoComplete="off" onSubmit={this.handleSubmit} >
+
+                    <form autoComplete="off" onSubmit={this.handleSubmit} >
                         <div>
                             <TextField
                                 label="Title:"
@@ -55,14 +56,12 @@ class Form extends Component {
                                 value={this.state.title}
                                 onChange={this.handleChange}
                                 multiline
-                                
                             />
                         </div>
 
                         <br />
 
                         <div>
-
                             <FormControl fullWidth>
                                 <InputLabel id="genre">Genre</InputLabel>
                                 <Select
@@ -78,12 +77,12 @@ class Form extends Component {
                                     <MenuItem value="Family">Family</MenuItem>
                                 </Select>
                             </FormControl>
-
                         </div>
-                        <br />
-                        <div>
 
-                        <FormControl fullWidth>
+                        <br />
+
+                        <div>
+                            <FormControl fullWidth>
                                 <InputLabel id="streamer">Streamer</InputLabel>
                                 <Select
                                     labelId="streamer"
@@ -100,8 +99,10 @@ class Form extends Component {
                                 </Select>
                             </FormControl>
                         </div>
+
                         <br />
                         <div>
+
                             <TextField
                                 label="Description:"
                                 variant="outlined"
@@ -115,7 +116,9 @@ class Form extends Component {
                             />
                         </div>
                         <br />
-                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Submit</Button>
+
+                        <Button variant="contained" color="primary" onClick={this.handleSubmit}>Submit Recommendation</Button>
+
                     </form>
                 </Typography>
             </div>
