@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Movie from './Movie';
-import NoMovies from './nomovies.gif';
+import NoResults from './Genres/NoResults';
 
 class MovieIndex extends Component {
     render() {
@@ -20,8 +20,10 @@ class MovieIndex extends Component {
 
         return (
             <div>
-            <br /> <br />
-                <NoMovies />
+            <br /> 
+                <NoResults />
+            <br />
+                
             </div>
             
         )

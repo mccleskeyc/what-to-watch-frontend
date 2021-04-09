@@ -62,6 +62,7 @@ class Form extends Component {
                         <br />
 
                         <div>
+
                             <FormControl fullWidth>
                                 <InputLabel id="genre">Genre</InputLabel>
                                 <Select

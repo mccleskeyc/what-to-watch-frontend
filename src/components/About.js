@@ -41,7 +41,7 @@ class About extends Component {
                 <Typography
                     variant="body2"
                 >
-                    In the streaming era, deciding on a movie to watch is only half the battle. It's at least as important to find a movie available on a streaming service you subscribe to! When you've found a movie you think you might want to watch, click the "More Info" button for more details, including where it is streaming.</Typography>
+                    In the streaming era, deciding on a movie to watch is only half the battle. It's at least as important to find a movie available on your streaming services! When you've found a movie you think you might want to watch, click the "More Info" button for more details, including where it is streaming.</Typography>
                 <Typography
                     variant="h5"
                     align="left"
